@@ -1,7 +1,9 @@
 import React from 'react'
 import { FaSignOutAlt, FaSignInAlt, FaUser } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
+import { useSelector } from 'react-redux/es/hooks/useSelector'
 function Header() {
+  const { user } = useSelector((state) => state.auth)
   return (
     <header className="header">
       <div className="logo">
@@ -14,9 +16,11 @@ function Header() {
           </Link>
         </li>
         <li>
-          <Link to="/register">
-            <FaUser /> Register
-          </Link>
+          {!user && (
+            <Link to="/register">
+              <FaUser /> Register
+            </Link>
+          )}
         </li>
         <li>
           <Link to="/logout">
