@@ -16,6 +16,10 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 // User Routes
 app.use('/api/users', require('./routes/userRoutes'))
+
+// Tickets Routes
+app.use('/api/tickets', require('./routes/ticketRoutes'))
+
 // error handler middleware
 app.use(errorHandler)
 
