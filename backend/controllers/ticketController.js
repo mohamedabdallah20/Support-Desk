@@ -18,7 +18,7 @@ const getTickets = asyncHandler(async (req, res) => {
     user: user._id,
   })
 
-  res.status(200).json({ tickets })
+  res.status(200).json({ ...tickets })
 })
 
 // @desc    Create new ticket
