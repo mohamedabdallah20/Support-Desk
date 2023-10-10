@@ -59,7 +59,7 @@ const getTicket = asyncHandler(async (req, res) => {
     res.status(401)
     throw new Error('Not Auth')
   }
-  res.status(200).json({ ticket })
+  res.status(200).json(ticket)
 })
 // @desc    Delete user single ticket
 // @route   DELETE /api/tickets/:id
