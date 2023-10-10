@@ -36,8 +36,6 @@ export const fetchTickets = createAsyncThunk(
   async (_, thunkAPI) => {
     try {
       const token = thunkAPI.getState().auth.user.token
-      console.log(token)
-
       return await ticketService.fetchTickets(token)
     } catch (error) {
       const message =
