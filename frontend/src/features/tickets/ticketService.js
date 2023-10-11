@@ -22,7 +22,7 @@ const fetchTickets = async (token) => {
   const res = await axios.get(API_URL, config)
   return res.data
 }
-// fetch user tickets
+// fetch user ticket
 const fetchTicket = async (ticketId, token) => {
   const config = {
     headers: {
