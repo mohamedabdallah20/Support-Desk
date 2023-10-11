@@ -18,7 +18,7 @@ app.use(express.urlencoded({ extended: false }))
 
 // cors middleware
 const corsOptions = {
-  origin: 'http://localhost:3000', // frontend URI (ReactJS)
+  origin: 'https://ticket-support-desk.onrender.com', // frontend URI (ReactJS)
 }
 app.use(cors(corsOptions))
 

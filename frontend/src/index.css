@@ -74,7 +74,23 @@ h3 {
 .header ul li a svg {
   margin-right: 5px;
 }
-
+.header-heading {
+  font-size: 1rem;
+  font-weight: 700;
+}
+.header-heading span {
+  font-size: 1rem;
+  font-weight: 300;
+}
+.header-heading a {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #828282;
+}
+.logo {
+  display: flex;
+  justify-content: space-between;
+}
 .heading {
   font-size: 2rem;
   font-weight: 700;

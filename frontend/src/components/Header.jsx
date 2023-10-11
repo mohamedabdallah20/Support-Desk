@@ -15,7 +15,19 @@ function Header() {
   return (
     <header className="header">
       <div className="logo">
-        <Link to="/">Support Desk</Link>
+        <Link to="/">Support Desk </Link>
+
+        <div className="header-heading">
+          <span>_by : </span>
+          <a
+            className="header-heading"
+            href="https://github.com/mohamedabdallah20/"
+            target="blank"
+          >
+            {' '}
+            @Mohammed Abdallah
+          </a>
+        </div>
       </div>
       {user ? (
         <ul>
