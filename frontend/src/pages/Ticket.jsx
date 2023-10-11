@@ -8,7 +8,11 @@ import {
   reset,
   closeTicket,
 } from '../features/tickets/ticketSlice'
-import { fetchNotes, reset as notesReset } from '../features/notes/noteSlice'
+import {
+  fetchNotes,
+  createNote,
+  reset as notesReset,
+} from '../features/notes/noteSlice'
 import { useParams, useNavigate } from 'react-router-dom'
 import Spinner from '../components/Spinner'
 import BackButton from '../components/BackButton'
@@ -72,8 +76,8 @@ function Ticket() {
   // create note submit
   const onNoteSubmit = (e) => {
     e.preventDefault()
-    // @todo dispatch create note
-    console.log('submit')
+
+    dispatch(createNote({ noteText, ticketId }))
     closeModal()
   }
   if (isLoading || notesIsLoading) {
