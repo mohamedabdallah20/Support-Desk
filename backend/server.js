@@ -3,6 +3,7 @@ const dotenv = require('dotenv').config()
 const colors = require('colors')
 const connectDB = require('./config/db')
 const { errorHandler } = require('./middleware/errorMiddleware')
+const cors = require('cors')
 
 const PORT = process.env.PORT || 8888
 // connect to DB
@@ -14,6 +15,13 @@ const app = express()
 // body parser middleware
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
+
+// cors middleware
+const corsOptions = {
+  origin: 'http://localhost:3000', // frontend URI (ReactJS)
+}
+app.use(cors(corsOptions))
+
 // User Routes
 app.use('/api/users', require('./routes/userRoutes'))
 
