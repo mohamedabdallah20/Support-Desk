@@ -1,5 +1,6 @@
 import axios from 'axios'
-const API_URL = '/api/tickets'
+const API_URL = `${process.env.REACT_APP_PROXY}/api/tickets`
+// console.log(process.env.REACT_APP_PROXY)
 
 // create ticket
 const createTicket = async (ticket, token) => {

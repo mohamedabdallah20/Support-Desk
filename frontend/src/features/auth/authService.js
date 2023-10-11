@@ -1,5 +1,5 @@
 import axios from 'axios'
-const API_URL = '/api/users'
+const API_URL = `${process.env.REACT_APP_PROXY}/api/users`
 // register user
 const register = async (user) => {
   const res = await axios.post(API_URL, user)

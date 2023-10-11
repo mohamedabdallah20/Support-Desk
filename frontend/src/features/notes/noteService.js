@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const API_URL = '/api/tickets'
+const API_URL = `${process.env.REACT_APP_PROXY}/api/tickets`
 
 // fetch ticket Notes
 const fetchNotes = async (ticketId, token) => {
