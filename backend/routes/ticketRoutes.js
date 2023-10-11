@@ -10,6 +10,10 @@ const {
 
 const auth = require('../middleware/auth')
 
+// Re-Route into note router
+const noteRouter = require('./noteRoutes')
+router.use('/:ticketId/notes', noteRouter)
+
 router.route('/').get(auth, getTickets).post(auth, createTicket)
 router
   .route('/:id')
